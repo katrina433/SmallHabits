@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270"
+            android:pivotX="50%"
+            android:pivotY="50%" >
+            <shape
+                android:shape="ring"
+                android:innerRadius="@dimen/timer_progress_bar_inner_radius"
+                android:thickness="@dimen/timer_progress_bar_thickness"
+                android:useLevel="true">
+
+                <solid android:color="?attr/colorPrimaryDark" />
+                <size android:width="@dimen/timer_side"
+                    android:height="@dimen/timer_side" />
+            </shape>
+        </rotate>
+    </item>
+</selector>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/progressHistoryPageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/task_title"
+                    app:srcCompat="@drawable/task_title_box" />
+
+                <TextView
+                    android:layout_width="@dimen/task_title_box_total_width"
+                    android:layout_height="@dimen/task_title_box_height"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/task_title_box_left_offset"
+                    android:paddingRight="@dimen/task_title_box_left_offset"
+                    android:text="@string/progress_history"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/streak_box_width"
+                    android:layout_height="@dimen/streak_box_height"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    app:cardCornerRadius="@dimen/streak_box_radius">
+
+
+                    <TextView
+                        android:id="@+id/overallCurrentStreak"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|top"
+                        android:paddingTop="@dimen/streak_box_padding"
+                        android:paddingBottom="0dp"
+                        android:text="@string/current_streak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/overallCurrentStreakString"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|center_horizontal"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="@dimen/streak_box_padding"
+                        android:text="@string/current_streak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/streak_box_width"
+                    android:layout_height="@dimen/streak_box_height"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    app:cardCornerRadius="@dimen/streak_box_radius">
+
+                    <TextView
+                        android:id="@+id/overallLongestStreak"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|top"
+                        android:paddingTop="@dimen/streak_box_padding"
+                        android:paddingBottom="0dp"
+                        android:text="@string/best_streak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/overallLongestStreakString"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|center_horizontal"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="@dimen/streak_box_padding"
+                        android:text="@string/best_streak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="?android:attr/textColorSecondary" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/allTasksDisplayCharts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:text="@string/display_charts"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/historyPageBarGraphLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/historyPageSunText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sunday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/historyPageSunBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/historyPageMonText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/monday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/historyPageMonBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/historyPageTueText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tuesday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/historyPageTueBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/historyPageWedText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wednesday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/historyPageWedBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/historyPageThuText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thursday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/historyPageThuBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/historyPageFriText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/historyPageFriBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/historyPageSatText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saturday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/historyPageSatBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/historyPageCalendarDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/date"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:id="@+id/historyPageCalendarDateProgressString"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/progress_history"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </LinearLayout>
+
+            <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                android:id="@+id/historyPageCalendar"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="24dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:compactCalendarBackgroundColor="@android:color/transparent"
+                app:compactCalendarCurrentDayBackgroundColor="?attr/colorSecondary"
+                app:compactCalendarCurrentSelectedDayBackgroundColor="?attr/colorPrimary"
+                app:compactCalendarMultiEventIndicatorColor="#fff"
+                app:compactCalendarTargetHeight="250dp"
+                app:compactCalendarTextColor="?android:attr/textColorPrimary"
+                app:compactCalendarTextSize="12sp" />
+
+            <TextView
+                android:id="@+id/taskListByDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/layout_padding"
+                android:paddingEnd="@dimen/layout_padding"
+                android:text="@string/empty_string"
+                android:textColor="?android:attr/textColorSecondary" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

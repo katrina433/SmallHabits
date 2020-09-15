@@ -1,0 +1,140 @@
+<resources>
+
+    <style name="BrownTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSecondary">@color/button_color</item>
+        <item name="colorSecondaryVariant">@color/button_stroke</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColorPrimary">@color/text_color_primary</item>
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="GrayTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/gray_3</item>
+        <item name="colorPrimaryDark">@color/gray_2</item>
+        <item name="colorAccent">@color/white_3</item>
+        <item name="colorSecondary">@color/gray_5</item>
+        <item name="colorSecondaryVariant">@color/gray_3</item>
+        <item name="android:windowBackground">@color/gray_4</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white_3</item>
+    </style>
+    
+    <style name="LightGrayTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/light_gray_1</item>
+        <item name="colorPrimaryDark">@color/light_gray_2</item>
+        <item name="colorAccent">@color/light_gray_3</item>
+    </style>
+
+    <style name="RedOrangeTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/red_orange_1</item>
+        <item name="colorPrimaryDark">@color/red_orange_2</item>
+        <item name="colorAccent">@color/red_orange_3</item>
+    </style>
+
+    <style name="OrangeTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/orange_1</item>
+        <item name="colorPrimaryDark">@color/orange_2</item>
+        <item name="colorAccent">@color/orange_3</item>
+    </style>
+
+    <style name="PastelGreenTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/pastel_green_1</item>
+        <item name="colorPrimaryDark">@color/pastel_green_2</item>
+        <item name="colorAccent">@color/pastel_green_3</item>
+    </style>
+
+    <style name="BrightGreenTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/bright_green_1</item>
+        <item name="colorPrimaryDark">@color/bright_green_2</item>
+        <item name="colorAccent">@color/bright_green_3</item>
+    </style>
+
+    <style name="AvocadoGreenTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/avocado_green_1</item>
+        <item name="colorPrimaryDark">@color/avocado_green_2</item>
+        <item name="colorAccent">@color/avocado_green_3</item>
+    </style>
+
+    <style name="GreenTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/green_1</item>
+        <item name="colorPrimaryDark">@color/green_2</item>
+        <item name="colorAccent">@color/green_3</item>
+    </style>
+
+    <style name="AquaTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/aqua_1</item>
+        <item name="colorPrimaryDark">@color/aqua_2</item>
+        <item name="colorAccent">@color/aqua_3</item>
+    </style>
+
+    <style name="AshBlueTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/ash_blue_1</item>
+        <item name="colorPrimaryDark">@color/ash_blue_2</item>
+        <item name="colorAccent">@color/ash_blue_3</item>
+    </style>
+
+    <style name="PastelBlueTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/pastel_blue_1</item>
+        <item name="colorPrimaryDark">@color/pastel_blue_2</item>
+        <item name="colorAccent">@color/pastel_blue_3</item>
+    </style>
+
+    <style name="BlueTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/blue_1</item>
+        <item name="colorPrimaryDark">@color/blue_2</item>
+        <item name="colorAccent">@color/blue_3</item>
+    </style>
+
+    <style name="DarkBlueTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/dark_blue_1</item>
+        <item name="colorPrimaryDark">@color/dark_blue_2</item>
+        <item name="colorAccent">@color/dark_blue_3</item>
+    </style>
+
+    <style name="PurpleTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/purple_1</item>
+        <item name="colorPrimaryDark">@color/purple_2</item>
+        <item name="colorAccent">@color/purple_3</item>
+    </style>
+
+    <style name="LightPurpleTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/light_purple_1</item>
+        <item name="colorPrimaryDark">@color/light_purple_2</item>
+        <item name="colorAccent">@color/light_purple_3</item>
+    </style>
+
+    <style name="VioletTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/violet_1</item>
+        <item name="colorPrimaryDark">@color/violet_2</item>
+        <item name="colorAccent">@color/violet_3</item>
+    </style>
+
+    <style name="PinkPurpleTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/pink_purple_1</item>
+        <item name="colorPrimaryDark">@color/pink_purple_2</item>
+        <item name="colorAccent">@color/pink_purple_3</item>
+    </style>
+
+    <style name="LightPinkPurpleTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/light_pink_purple_1</item>
+        <item name="colorPrimaryDark">@color/light_pink_purple_2</item>
+        <item name="colorAccent">@color/light_pink_purple_3</item>
+    </style>
+
+    <style name="PinkTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/pink_1</item>
+        <item name="colorPrimaryDark">@color/pink_2</item>
+        <item name="colorAccent">@color/pink_3</item>
+    </style>
+
+    <style name="BabyPinkTheme" parent="BrownTheme">
+        <item name="colorPrimary">@color/baby_pink_1</item>
+        <item name="colorPrimaryDark">@color/baby_pink_2</item>
+        <item name="colorAccent">@color/baby_pink_3</item>
+    </style>
+
+</resources>

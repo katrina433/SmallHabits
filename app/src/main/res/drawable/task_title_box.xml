@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="@dimen/task_title_box_width"
+        android:height="@dimen/task_title_box_height"
+        android:left="@dimen/task_title_box_left_offset">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorPrimary"></solid>
+        </shape>
+    </item>
+    <item
+        android:width="@dimen/task_title_box_arrow_side"
+        android:height="@dimen/task_title_box_arrow_side"
+        android:left="@dimen/task_title_box_right_offset">
+        <rotate android:fromDegrees="45"
+            android:pivotX="0"
+            android:pivotY="0">
+            <shape>
+                <solid android:color="?attr/colorPrimary"></solid>
+            </shape>
+        </rotate>
+    </item>
+    <item
+        android:width="@dimen/task_title_box_arrow_side"
+        android:height="@dimen/task_title_box_arrow_side"
+        android:left="@dimen/task_title_box_left_offset">
+        <rotate android:fromDegrees="45"
+            android:pivotX="0"
+            android:pivotY="0">
+            <shape>
+                <solid android:color="?attr/colorPrimary"></solid>
+            </shape>
+        </rotate>
+    </item>
+
+</layer-list>

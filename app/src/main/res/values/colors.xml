@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/brown_1</color>
+    <color name="colorPrimaryDark">@color/brown_2</color>
+    <color name="colorAccent">@color/brown_3</color>
+    <color name="background">@color/white</color>
+    <color name="text_color_primary">@color/black</color>
+    <color name="text_color_secondary">@color/gray_2</color>
+    <color name="button_color">@color/white_3</color>
+    <color name="button_stroke">@color/white_2</color>
+
+    <!--  basic_colors  -->
+    <color name="white">#ffffff</color>
+    <color name="white_2">#fdfdf6</color>
+    <color name="white_3">#f0ece3</color>
+    <color name="gray_1">#808080</color>
+    <color name="gray_2">#525252</color>
+    <color name="gray_3">#414141</color>
+    <color name="gray_4">#313131</color>
+    <color name="gray_5">#292929</color>
+    <color name="black">#000000</color>
+    <color name="yellow">#ffd36b</color>
+    <color name="brown_1">#dfd3c3</color>
+    <color name="brown_2">#c7b198</color>
+    <color name="brown_3">#977D5F</color>
+    <color name="dark_pink">#f19292</color>
+
+    <!--  light_gray  -->
+    <color name="light_gray_1">#F3E6CC</color>
+    <color name="light_gray_2">#d8d3cd</color>
+    <color name="light_gray_3">#797a7e</color>
+
+    <!--  red_orange  -->
+    <color name="red_orange_1">#fae7cb</color>
+    <color name="red_orange_2">#ffb385</color>
+    <color name="red_orange_3">#ff7272</color>
+
+    <!--  orange  -->
+    <color name="orange_1">#ffeadb</color>
+    <color name="orange_2">#f7c5a8</color>
+    <color name="orange_3">#ff9a76</color>
+
+    <!--  pastel_green  -->
+    <color name="pastel_green_1">#f4f9f4</color>
+    <color name="pastel_green_2">#c4e3cb</color>
+    <color name="pastel_green_3">#8aae92</color>
+
+    <!--  bright_green  -->
+    <color name="bright_green_1">#effcef</color>
+    <color name="bright_green_2">#ccedd2</color>
+    <color name="bright_green_3">#94d3ac</color>
+
+    <!--  avocado_green  -->
+    <color name="avocado_green_1">#d6efc7</color>
+    <color name="avocado_green_2">#96bb7c</color>
+    <color name="avocado_green_3">#184d47</color>
+
+    <!--  green  -->
+    <color name="green_1">#aacfd0</color>
+    <color name="green_2">#79a8a9</color>
+    <color name="green_3">#1f4e5f</color>
+
+    <!--  aqua  -->
+    <color name="aqua_1">#cbf1f5</color>
+    <color name="aqua_2">#a6e3e9</color>
+    <color name="aqua_3">#71c9ce</color>
+
+    <!--  ash_blue  -->
+    <color name="ash_blue_1">#f0f5f9</color>
+    <color name="ash_blue_2">#c9d6df</color>
+    <color name="ash_blue_3">#52616b</color>
+
+    <!--  pastel_blue  -->
+    <color name="pastel_blue_1">#d6e6f2</color>
+    <color name="pastel_blue_2">#b9d7ea</color>
+    <color name="pastel_blue_3">#769fcd</color>
+
+    <!--  blue  -->
+    <color name="blue_1">#b9ceeb</color>
+    <color name="blue_2">#87a8d0</color>
+    <color name="blue_3">#516E91</color>
+    
+    <!--  dark_blue  -->
+    <color name="dark_blue_1">#bbe1fa</color>
+    <color name="dark_blue_2">#3282b8</color>
+    <color name="dark_blue_3">#0f4c75</color>
+
+    <!--  purple  -->
+    <color name="purple_1">#dcd6f7</color>
+    <color name="purple_2">#a6b1e1</color>
+    <color name="purple_3">#424874</color>
+
+    <!--  light_purple  -->
+    <color name="light_purple_1">#f4eeff</color>
+    <color name="light_purple_2">#dcd6f7</color>
+    <color name="light_purple_3">#a6b1e1</color>
+
+    <!--  violet  -->
+    <color name="violet_1">#e1ccec</color>
+    <color name="violet_2">#c9b6e4</color>
+    <color name="violet_3">#be9fe1</color>
+
+    <!--  pink_purple  -->
+    <color name="pink_purple_1">#f1c6e7</color>
+    <color name="pink_purple_2">#e5b0ea</color>
+    <color name="pink_purple_3">#bd83ce</color>
+
+    <!--  light_pink_purple  -->
+    <color name="light_pink_purple_1">#f7e8f6</color>
+    <color name="light_pink_purple_2">#f1c6e7</color>
+    <color name="light_pink_purple_3">#f1c6e7</color>
+
+    <!--  pink  -->
+    <color name="pink_1">#fbe8e7</color>
+    <color name="pink_2">#f7ddde</color>
+    <color name="pink_3">#ffc4d0</color>
+
+    <!--  baby_pink  -->
+    <color name="baby_pink_1">#faf2f2</color>
+    <color name="baby_pink_2">#f3e1e1</color>
+    <color name="baby_pink_3">#f1d1d1</color>
+</resources>

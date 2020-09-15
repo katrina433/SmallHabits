@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/layout_padding">
+
+
+    <ScrollView
+        android:id="@+id/detailPageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end">
+
+                <ImageButton
+                    android:id="@+id/editTask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="false"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/edit"
+                    android:tint="?attr/colorAccent"
+                    app:srcCompat="@drawable/edit" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/detailPageTaskTitleBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/task_title"
+                    app:srcCompat="@drawable/task_title_box" />
+
+                <TextView
+                    android:id="@+id/detailPageTaskTitle"
+                    android:layout_width="@dimen/task_title_box_total_width"
+                    android:layout_height="@dimen/task_title_box_height"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/task_title_box_left_offset"
+                    android:paddingRight="@dimen/task_title_box_left_offset"
+                    android:text="@string/task_title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/detailPageRepeatDays"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/detailPageSun"
+                    android:layout_width="@dimen/add_task_size"
+                    android:layout_height="36dp"
+                    android:background="@drawable/repeat_days_button"
+                    android:clickable="false"
+                    android:text="@string/sunday"
+                    android:textOff="@string/sunday"
+                    android:textOn="@string/sunday" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="@dimen/repeat_days_margin"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <ToggleButton
+                    android:id="@+id/detailPageMon"
+                    android:layout_width="@dimen/add_task_size"
+                    android:layout_height="36dp"
+                    android:background="@drawable/repeat_days_button"
+                    android:clickable="false"
+                    android:text="@string/monday"
+                    android:textOff="@string/monday"
+                    android:textOn="@string/monday" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="@dimen/repeat_days_margin"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <ToggleButton
+                    android:id="@+id/detailPageTue"
+                    android:layout_width="@dimen/add_task_size"
+                    android:layout_height="@dimen/add_task_size"
+                    android:background="@drawable/repeat_days_button"
+                    android:clickable="false"
+                    android:text="@string/tuesday"
+                    android:textOff="@string/tuesday"
+                    android:textOn="@string/tuesday" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="@dimen/repeat_days_margin"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <ToggleButton
+                    android:id="@+id/detailPageWed"
+                    android:layout_width="@dimen/add_task_size"
+                    android:layout_height="@dimen/add_task_size"
+                    android:background="@drawable/repeat_days_button"
+                    android:clickable="false"
+                    android:text="@string/wednesday"
+                    android:textOff="@string/wednesday"
+                    android:textOn="@string/wednesday" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="@dimen/repeat_days_margin"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <ToggleButton
+                    android:id="@+id/detailPageThu"
+                    android:layout_width="@dimen/add_task_size"
+                    android:layout_height="@dimen/add_task_size"
+                    android:background="@drawable/repeat_days_button"
+                    android:clickable="false"
+                    android:text="@string/thursday"
+                    android:textOff="@string/thursday"
+                    android:textOn="@string/thursday" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="@dimen/repeat_days_margin"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <ToggleButton
+                    android:id="@+id/detailPageFri"
+                    android:layout_width="@dimen/add_task_size"
+                    android:layout_height="@dimen/add_task_size"
+                    android:background="@drawable/repeat_days_button"
+                    android:clickable="false"
+                    android:text="@string/friday"
+                    android:textOff="@string/friday"
+                    android:textOn="@string/friday" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="@dimen/repeat_days_margin"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <ToggleButton
+                    android:id="@+id/detailPageSat"
+                    android:layout_width="@dimen/add_task_size"
+                    android:layout_height="@dimen/add_task_size"
+                    android:background="@drawable/repeat_days_button"
+                    android:clickable="false"
+                    android:text="@string/saturday"
+                    android:textOff="@string/saturday"
+                    android:textOn="@string/saturday" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detailPageTodaysProgressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/today"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/today"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <SeekBar
+                    android:id="@+id/todaysProgressBar"
+                    style="@style/Widget.AppCompat.SeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <ProgressBar
+                    android:id="@+id/todaysTimerProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/todaysProgressString"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="end"
+                    android:text="@string/todays_progress"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="?android:attr/textColorSecondary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/streak_box_width"
+                    android:layout_height="@dimen/streak_box_height"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    app:cardCornerRadius="@dimen/streak_box_radius">
+
+
+                    <TextView
+                        android:id="@+id/currentStreak"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|top"
+                        android:paddingTop="@dimen/streak_box_padding"
+                        android:paddingBottom="0dp"
+                        android:text="@string/current_streak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/currentStreakString"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|center_horizontal"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="@dimen/streak_box_padding"
+                        android:text="@string/current_streak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="?android:attr/textColorSecondary" />
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/divider7"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"
+                    android:visibility="invisible" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/streak_box_width"
+                    android:layout_height="@dimen/streak_box_height"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="?attr/colorPrimary"
+                    app:cardCornerRadius="@dimen/streak_box_radius">
+
+                    <TextView
+                        android:id="@+id/longestStreak"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|top"
+                        android:paddingTop="@dimen/streak_box_padding"
+                        android:paddingBottom="0dp"
+                        android:text="@string/best_streak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/longestStreakString"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom|center_horizontal"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="@dimen/streak_box_padding"
+                        android:text="@string/best_streak"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="?android:attr/textColorSecondary" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/displayCharts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:text="@string/display_charts"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detailPageBarGraphLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/sunLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailPageSunText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sunday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/detailPageSunBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/monLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailPageMonText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/monday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/detailPageMonBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tueLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailPageTueText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tuesday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/detailPageTueBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailPageWedText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wednesday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/detailPageWedBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/thuLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailPageThuText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thursday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/detailPageThuBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/friLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailPageFriText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/friday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/detailPageFriBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/satLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailPageSatText"
+                        android:layout_width="@dimen/bar_graph_text_width"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saturday"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <ProgressBar
+                        android:id="@+id/detailPageSatBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/layout_padding"
+                        android:paddingEnd="0dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/calendarDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/date"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:id="@+id/calendarDateProgressString"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/progress_history"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </LinearLayout>
+
+            <com.github.sundeepk.compactcalendarview.CompactCalendarView
+                android:id="@+id/detailPageCalendar"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="24dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:compactCalendarBackgroundColor="@android:color/transparent"
+                app:compactCalendarCurrentDayBackgroundColor="?attr/colorSecondary"
+                app:compactCalendarCurrentSelectedDayBackgroundColor="?attr/colorPrimary"
+                app:compactCalendarMultiEventIndicatorColor="#fff"
+                app:compactCalendarTargetHeight="250dp"
+                app:compactCalendarTextColor="?android:attr/textColorPrimary"
+                app:compactCalendarTextSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/memoTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/memo"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <ImageButton
+                    android:id="@+id/addMemo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:contentDescription="@string/add_memo"
+                    android:tint="?attr/colorAccent"
+                    app:srcCompat="@drawable/add" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/memoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="?attr/colorPrimary"
+                android:orientation="vertical"
+                android:padding="@dimen/memo_padding"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/detailPageMemoImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/image"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/gallery" />
+
+                <TextView
+                    android:id="@+id/detailPageMemoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/text"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </LinearLayout>
+
+            <ToggleButton
+                android:id="@+id/archiveTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:background="?attr/colorPrimary"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textOff="@string/archive_task"
+                android:textOn="@string/continue_task" />
+
+            <Button
+                android:id="@+id/deleteTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#FF0000"
+                android:text="@string/delete_task"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

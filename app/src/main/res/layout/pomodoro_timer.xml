@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/layout_padding" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/pomodoroProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="@dimen/timer_side"
+            android:layout_height="@dimen/timer_side"
+            android:progressDrawable="@drawable/pomodoro_progress_bar" />
+
+        <TextView
+            android:id="@+id/timeLeftText"
+            android:layout_width="@dimen/timer_side"
+            android:layout_height="@dimen/timer_side"
+            android:gravity="center"
+            android:text="@string/timer"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/sessionText"
+            android:layout_width="@dimen/timer_side"
+            android:layout_height="@dimen/timer_side"
+            android:gravity="bottom|center_horizontal"
+            android:paddingTop="0dp"
+            android:paddingBottom="32dp"
+            android:text="@string/cycles"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="?android:attr/textColorSecondary" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <ImageButton
+            android:id="@+id/start"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/start"
+            android:tint="?attr/colorAccent"
+            app:srcCompat="@drawable/start_timer" />
+
+        <ImageButton
+            android:id="@+id/pause"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/pause"
+            android:tint="?attr/colorAccent"
+            app:srcCompat="@drawable/pause_timer" />
+
+        <ImageButton
+            android:id="@+id/takeBreak"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/break_time"
+            android:tint="?attr/colorAccent"
+            app:srcCompat="@drawable/take_break" />
+
+        <ImageButton
+            android:id="@+id/skipBreak"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/skip_break"
+            android:tint="?attr/colorAccent"
+            android:visibility="visible"
+            app:srcCompat="@drawable/skip_break" />
+
+        <ImageButton
+            android:id="@+id/endSession"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/end_session"
+            android:tint="?attr/colorAccent"
+            app:srcCompat="@drawable/end_session" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

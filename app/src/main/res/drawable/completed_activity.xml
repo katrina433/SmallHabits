@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:width="@dimen/task_display_size" android:height="@dimen/task_display_size"/>
+            <solid android:color="?attr/colorPrimary"/>
+            <stroke
+                android:color="?attr/colorPrimaryDark"
+                android:width="@dimen/progress_bar_thickness" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,49 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--  for add task and task detail page  -->
+    <dimen name="add_task_size">36dp</dimen>
+    <dimen name="repeat_days_margin">6dp</dimen>
+    <dimen name="task_title_box_width">240dp</dimen>
+    <dimen name="task_title_box_height">60dp</dimen>
+    <dimen name="task_title_box_arrow_side">42.4dp</dimen> // task_title_box_height / sqrt(2)
+    <dimen name="task_title_box_left_offset">30dp</dimen> // task_title_box_height / 2
+    <dimen name="task_title_box_right_offset">270dp</dimen> // task_title_box_width + task_title_box_left_offset
+    <dimen name="task_title_box_total_width">300dp</dimen> // task_title_box_width + 2 * task_title_box_left_offset
+    <dimen name="task_type_input_width">128dp</dimen>
+    <dimen name="add_task_page_padding">36dp</dimen>
+    <dimen name="streak_box_width">144dp</dimen>
+    <dimen name="streak_box_height">72dp</dimen>
+    <dimen name="streak_box_radius">36dp</dimen>
+    <dimen name="streak_box_text_width">24dp</dimen>
+    <dimen name="streak_box_padding">8dp</dimen>
+    <dimen name="calendar_date_width">120dp</dimen>
+    <dimen name="bar_graph_text_width">24dp</dimen>
+    <dimen name="memo_padding">12dp</dimen>
+
+    <!--  for main display page  -->
+    <dimen name="layout_padding">16dp</dimen>
+    <dimen name="task_layout_height">116dp</dimen> // the height of the relative layout containing the task display
+    <dimen name="task_layout_width">108dp</dimen>
+    <dimen name="task_display_size">100dp</dimen>
+    <dimen name="task_button_vertical_padding">12dp</dimen>
+    <dimen name="task_button_horizontal_padding">5dp</dimen>
+    <dimen name="progress_bar_inner_radius">47dp</dimen> // task_display_size / 2 - progress_bar_thickness
+    <dimen name="progress_bar_thickness">3dp</dimen>
+    <dimen name="progress_bar_elevation">10dp</dimen>
+    <dimen name="progress_layout_elevation">8dp</dimen>
+    <dimen name="progress_layout_padding">7dp</dimen>
+    <dimen name="task_display_title">5sp</dimen>
+    <dimen name="progress_text">5sp</dimen>
+
+    <!--  for task list page  -->
+    <dimen name="task_box_width">320dp</dimen>
+    <dimen name="task_box_height">64dp</dimen>
+    <dimen name="task_box_radius">32dp</dimen>
+    <dimen name="task_box_layout_height">86dp</dimen>
+
+    <!--  for pomodoro timer page  -->
+    <dimen name="timer_side">256dp</dimen>
+    <dimen name="timer_progress_bar_thickness">16dp</dimen>
+    <dimen name="timer_progress_bar_inner_radius">112dp</dimen> // timer_side / 2 - timer_progress_bar_thickness
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_checked="false">
+<shape android:shape="oval">
+    <solid android:color="?attr/colorSecondary"/>
+    <size android:width="@dimen/add_task_size" android:height="@dimen/add_task_size"/>
+</shape>
+</item>
+<item android:state_checked="true">
+<shape android:shape="oval">
+    <solid android:color="?attr/colorPrimary"/>
+    <size android:width="@dimen/add_task_size" android:height="@dimen/add_task_size"/>
+</shape>
+</item>
+    </selector>

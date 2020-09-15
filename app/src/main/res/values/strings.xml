@@ -1,0 +1,177 @@
+<resources>
+    <!--  Do not translate  -->
+    <string name="empty_string" translatable="false"></string>
+    <string name="request" translatable="false">Request</string>
+    <string name="task_database" translatable="false">taskDatabase</string>
+    <string name="task_management_database" translatable="false">taskManagementDatabase</string>
+    <string name="task_id" translatable="false">taskId</string>
+    <string name="task_type" translatable="false">taskType</string>
+    <string name="check_off_type" translatable="false">Check Off</string>
+    <string name="counter_type" translatable="false">Counter</string>
+    <string name="timer_type" translatable="false">Timer</string>
+    <string name="chronometer_type" translatable="false">Chronometer</string>
+    <string name="last_daily_updated" translatable="false">lastDailyUpdated</string>
+    <string name="streak_key" translatable="false">streakKey</string>
+    <string name="best_streak_key" translatable="false">bestStreakKey</string>
+    <string name="credit_key" translatable="false">creditKey</string>
+    <string name="history_key" translatable="false">historyKey</string>
+    <string name="rewards_key" translatable="false">rewardsKey</string>
+    <string name="theme_key" translatable="false">themeKey</string>
+    <string name="sort_key" translatable="false">SortKey</string>
+    <string name="sort_by_alphabet" translatable="false">SortByAlphabet</string>
+    <string name="sort_by_id" translatable="false">SortById</string>
+    <string name="daily_reminder_notification_key" translatable="false">dailyReminderNotificationKey</string>
+    <string name="daily_reminder_time_key" translatable="false">dailyReminderTimeKey</string>
+    <string name="failed_to_retrieve_task" translatable="false">Failed to retrieve task</string>
+    <string name="failed_to_retrieve_history" translatable="false">Failed to retrieve history</string>
+    <string name="failed_to_retrieve_rewards" translatable="false">Failed to retrieve rewards</string>
+    <string name="memo_text" translatable="false">memoText</string>
+    <string name="memo_image" translatable="false">memoImage</string>
+    <string name="daily_notification_channel_id" translatable="false">dailyNotificationChannel</string>
+    <string name="timer_notification_channel_id" translatable="false">timerNotificationChannel</string>
+
+    <string name="app_name">Small Habits</string>
+    <string name="daily_notification_channel_name">Daily Reminder</string>
+    <string name="daily_reminder_title">Log your progress</string>
+    <string name="daily_reminder_description">Did you complete all of your activities yet? Record them now! </string>
+    <string name="timer_notification_channel_name">Pomodoro Timer Alarm</string>
+    <string name="alarm_title">Time\'s up</string>
+    <string name="session_alarm_description">Good job! Take a break. </string>
+    <string name="break_alarm_description">Your break ended. Get back to work. </string>
+
+    <!--  Strings for navigation bar  -->
+    <string name="home">Home</string>
+    <string name="all_activities">All Activities</string>
+    <string name="progress_history">Progress History</string>
+    <string name="settings">Settings</string>
+
+    <!-- Strings used for MainActivity -->
+    <string name="all_day">All Day</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="evening">Evening</string>
+    <string name="add_task">Add Activity</string>
+    <string name="check_off">Check Off</string>
+    <string name="counter">Counter</string>
+    <string name="timer">Pomodoro Timer</string>
+    <string name="chronometer">Chronometer</string>
+    <string name="alphabet">Sort By: Alphabet</string>
+    <string name="time_added">Sort By: Time Added</string>
+    <string name="archived_activities">Archived Activities</string>
+    <string name="reward_achieved_title">Goal Accomplished</string>
+    <string name="reward_achieved_message_one">You reached</string>
+    <string name="reward_achieved_message_two">credits! Enjoy your reward(s):</string>
+    <string name="reward_achieved_message_button">Yay</string>
+
+    <string-array name="task_types">
+        <item>@string/check_off</item>
+        <item>@string/counter</item>
+        <item>@string/timer</item>
+        <item>@string/chronometer</item>
+    </string-array>
+
+    <string-array name="task_time">
+        <item>@string/all_day</item>
+        <item>@string/morning</item>
+        <item>@string/afternoon</item>
+        <item>@string/evening</item>
+    </string-array>
+
+    <!-- Strings used for AddTask -->
+    <string name="task_title">Task Title</string>
+    <string name="time">Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="activity_type">Activity Type</string>
+    <string name="daily_goal">Daily Goal</string>
+    <string name="sunday">S</string>
+    <string name="monday">M</string>
+    <string name="tuesday">T</string>
+    <string name="wednesday">W</string>
+    <string name="thursday">T</string>
+    <string name="friday">F</string>
+    <string name="saturday">S</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="confirm">Confirm</string>
+    <string name="num_times">Number of times</string>
+    <string name="duration">Duration</string>
+    <string name="hour">hr</string>
+    <string name="minute">min</string>
+    <string name="cycles">Cycles</string>
+    <string name="task_type_not_found_exception">Please choose your activity type</string>
+    <string name="task_title_not_found_exception">Please enter your activity</string>
+    <string name="task_time_not_found_exception">Please enter the time of your activity</string>
+    <string name="repeat_day_not_found_exception">Please set up your weekly repeat</string>
+    <string name="counter_goal_exception">Daily Goal: Please enter a positive number</string>
+    <string name="timer_goal_exception">Daily Goal: Please enter a time between 00:01 and 23:59</string>
+    <string name="cycle_goal_exception">Daily Goal: Please enter the number of cycles for your pomodoro session</string>
+
+    <!-- for task detail page -->
+    <string name="today">Today</string>
+    <string name="todays_progress">Today\'s Progress</string>
+    <string name="edit">Edit</string>
+    <string name="archive_task">Archive Activity</string>
+    <string name="continue_task">Continue Activity</string>
+    <string name="delete_task">Delete Activity</string>
+    <string name="current_streak">Current Streak</string>
+    <string name="best_streak">Best Streak</string>
+    <string name="display_charts">Display Charts</string>
+    <string name="progress">Progress</string>
+    <string name="no_progress">No Progress</string>
+    <string name="started">Started</string>
+    <string name="completed">Completed</string>
+    <string name="date">Date</string>
+    <string name="delete_box_message">Are you sure you want to delete this activity?
+    This action cannot be undone. </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!--  for display charts page  -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!--  for the memo page  -->
+    <string name="memo">Memo</string>
+    <string name="add_memo">Add Your Memo!</string>
+    <string name="text">Text</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="image">Image</string>
+    <string name="delete_memo">Delete Memo</string>
+    <string name="enter_your_memo">Enter Your Memo</string>
+    <string name="memo_input_error">Please type your memo</string>
+    <string name="no_camera_permission">Camera permission is denied</string>
+
+    <!--  for the settings page  -->
+    <string name="themes">Themes</string>
+    <string name="restart_to_see_changes">Restart the application to see changes</string>
+    <string name="daily_reminder_text">Daily Reminder</string>
+    <string name="off">OFF</string>
+    <string name="read_past_memo">Read Past Memo</string>
+    <string name="goals">Goals</string>
+
+
+    <!--  for the pomodoro timer page  -->
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="break_time">Break</string>
+    <string name="skip_break">Skip Break</string>
+    <string name="end_session">End Session</string>
+    <string name="end_session_message">Are you sure to end the session?
+        You will lose your progress for any unfinished cycle. </string>
+
+    <!--  for the edit rewards page  -->
+    <string name="reward_explanation">Reward yourself for keeping up your good habits!
+        You earn credits daily based on the completion of your activities and your streak,
+        set goals and rewards for yourself (Ex. Watch a movie, Shopping, Have a nice dessert). </string>
+    <string name="current_credit">Current Credits:</string>
+    <string name="reward">Reward</string>
+    <string name="credit">Credits</string>
+    <string name="illegal_reward_name_exception">Enter your reward name</string>
+    <string name="illegal_credit_exception">Enter a positive number for your credit goal</string>
+</resources>

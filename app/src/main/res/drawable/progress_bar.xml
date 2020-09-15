@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate
+            android:fromDegrees="270"
+            android:toDegrees="270"
+            android:pivotX="50%"
+            android:pivotY="50%" >
+            <shape
+                android:shape="ring"
+                android:innerRadius="@dimen/progress_bar_inner_radius"
+                android:thickness="@dimen/progress_bar_thickness"
+                android:useLevel="true">
+
+                <solid android:color="?attr/colorPrimaryDark" />
+                <size android:width="@dimen/task_display_size"
+                    android:height="@dimen/task_display_size" />
+            </shape>
+        </rotate>
+    </item>
+</selector>

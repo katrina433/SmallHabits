@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--  request codes  -->
+    <integer name="home_page_request_code">1</integer>
+    <integer name="task_list_page_request_code">2</integer>
+    <integer name="progress_history_page_request_code">3</integer>
+    <integer name="settings_page_request_code">4</integer>
+    <integer name="task_detail_page_request_code">5</integer>
+    <integer name="add_task_request_code">6</integer>
+    <integer name="edit_task_request_code">7</integer>
+    <integer name="add_memo_request_code">8</integer>
+    <integer name="edit_memo_request_code">9</integer>
+    <integer name="archive_task_request_code">10</integer>
+    <integer name="delete_memo_request_code">11</integer>
+    <integer name="open_camera_request_code">12</integer>
+    <integer name="open_gallery_request_code">13</integer>
+    <integer name="individual_task_graph_request_code">14</integer>
+    <integer name="all_tasks_graph_request_code">15</integer>
+    <integer name="camera_permission_request_code">16</integer>
+    <integer name="storage_permission_request_code">17</integer>
+    <integer name="start_pomodoro_timer_request_code">18</integer>
+    <integer name="set_daily_reminder_request_code">19</integer>
+    <integer name="edit_rewards_request_code">20</integer>
+
+<!--  result codes  -->
+    <integer name="task_added_result_code">1</integer>
+    <integer name="task_edited_result_code">2</integer>
+    <integer name="task_archived_result_code">3</integer>
+    <integer name="task_deleted_result_code">4</integer>
+    <integer name="memo_added_result_code">5</integer>
+    <integer name="memo_deleted_result_code">6</integer>
+
+<!--  notification ids  -->
+    <integer name="daily_reminder_id">1</integer>
+    <integer name="alarm_notification_id">2</integer>
+
+</resources>

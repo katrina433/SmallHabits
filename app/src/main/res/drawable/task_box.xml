@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="-90"
+                android:startColor="?attr/colorPrimary"
+                android:endColor="?attr/colorPrimaryDark" />
+            <size
+                android:width="@dimen/task_box_width"
+                android:height="@dimen/task_box_height" />
+            <corners android:radius="@dimen/task_box_radius" />
+        </shape>
+    </item>
+
+</selector>

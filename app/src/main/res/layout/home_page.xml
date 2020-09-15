@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/allDay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/all_day"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="24sp" />
+
+            <ImageButton
+                android:id="@+id/addTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/add_task"
+                android:tint="?attr/colorAccent"
+                app:srcCompat="@drawable/add" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/allDayTaskScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <LinearLayout
+                android:id="@+id/allDayTaskLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/allDayTaskScroll">
+
+            <LinearLayout
+                android:id="@+id/taskLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/morningTaskTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TableLayout>
+
+                <LinearLayout
+                    android:id="@+id/morningHeaderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/morning"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@drawable/morning_icon" />
+
+                    <TextView
+                        android:id="@+id/morning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/morning"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/morningTaskLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="3" />
+
+                <LinearLayout
+                    android:id="@+id/afternoonHeaderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/afternoon"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@drawable/afternoon_icon" />
+
+                    <TextView
+                        android:id="@+id/afternoon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/afternoon"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/afternoonTaskLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="3">
+
+                </androidx.gridlayout.widget.GridLayout>
+
+                <LinearLayout
+                    android:id="@+id/eveningHeaderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="#00FFFFFF"
+                        android:contentDescription="@string/evening"
+                        android:tint="@color/yellow"
+                        app:srcCompat="@drawable/evening_icon" />
+
+                    <TextView
+                        android:id="@+id/evening"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/evening"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/eveningTaskLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="3" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
