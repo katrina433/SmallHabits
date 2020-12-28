@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import java.text.SimpleDateFormat
 import java.util.*

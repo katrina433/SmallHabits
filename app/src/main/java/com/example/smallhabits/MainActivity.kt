@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.app.*
 import android.content.*
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         createNotificationChannel()
         LocalBroadcastManager.getInstance(this).registerReceiver(
-            timerIntentReceiver, IntentFilter("com.example.habitbuilder.POMODORO_TIMER"))
+            timerIntentReceiver, IntentFilter("com.example.smallhabits.POMODORO_TIMER"))
 
         initVariables()
         setUpListeners()

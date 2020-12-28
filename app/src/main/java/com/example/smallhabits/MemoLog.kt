@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 class MemoLog(
     val taskTitle: String,

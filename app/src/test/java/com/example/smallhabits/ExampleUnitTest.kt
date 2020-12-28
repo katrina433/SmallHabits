@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import org.junit.Test
 

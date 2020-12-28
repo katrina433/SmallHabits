@@ -1,7 +1,5 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
-import android.graphics.Color
-import android.net.Uri
 import com.github.sundeepk.compactcalendarview.domain.Event
 
 class TaskEvent(markColor: Int, date: Long, val log: TaskHistoryLog) :

@@ -1,10 +1,9 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log.d
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.github.sundeepk.compactcalendarview.CompactCalendarView

@@ -1,18 +1,14 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.content.res.Resources
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
-import com.example.habitbuilder.R.*
+import com.example.smallhabits.R.*
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.add_task.*
 import java.lang.Exception
@@ -40,11 +36,6 @@ class AddTask: AppCompatActivity() {
 
     private var taskType: String? = null
 
-    /**
-     * Create the activity for adding/editing a task.
-     * Save the task information to the device shared preferences
-     * when the confirm button is clicked.
-     */
     override fun onCreate(savedInstanceState: Bundle?) {
         val taskManagementDB = getSharedPreferences(
             resources.getString(string.task_management_database), Context.MODE_PRIVATE)
@@ -154,9 +145,6 @@ class AddTask: AppCompatActivity() {
         }
     }
 
-    /**
-     * Initiate variables and exceptions.
-     */
     private fun initVariables() {
         gson = Gson()
         taskDB = getSharedPreferences(resources.getString(string.task_database), Context.MODE_PRIVATE)
@@ -178,10 +166,6 @@ class AddTask: AppCompatActivity() {
             Exception(resources.getString(string.cycle_goal_exception))
     }
 
-    /**
-     * Display the layout for adding a new task.
-     * Show or remove corresponding daily goal when a specific task type is chosen.
-     */
     private fun addTaskDisplay() {
         taskTypeInput.setOnCheckedChangeListener { _, checkedId ->
             val button = findViewById<RadioButton>(checkedId)
@@ -224,10 +208,6 @@ class AddTask: AppCompatActivity() {
         }
     }
 
-    /**
-     * Display the layout for editing an existing task.
-     * Show the current task information.
-     */
     private fun editTaskDisplay() {
         taskTypeText.visibility = View.GONE
         taskTypeInput.visibility = View.GONE
@@ -284,9 +264,6 @@ class AddTask: AppCompatActivity() {
         }
     }
 
-    /**
-     * @return the task to be edited from shared preferences.
-     */
     private fun getTask(): Task {
         taskType = intent.getStringExtra(resources.getString(string.task_type))
         val taskId = intent.getIntExtra(resources.getString(string.task_id), -1)
@@ -308,10 +285,6 @@ class AddTask: AppCompatActivity() {
         }
     }
 
-    /**
-     * @return the task type.
-     * @throws taskTypeNotFoundException if the user has not chosen a task type.
-     */
     private fun getType(): String {
         if (taskType == null) {
             throw taskTypeNotFoundException
@@ -319,9 +292,6 @@ class AddTask: AppCompatActivity() {
         return taskType as String
     }
 
-    /**
-     * @return the id of the new task.
-     */
     private fun getId(): Int {
         return getSharedPreferences(
             resources.getString(string.task_management_database),
@@ -329,10 +299,6 @@ class AddTask: AppCompatActivity() {
             resources.getString(string.task_id), 0) + 1
     }
 
-    /**
-     * @return the task title.
-     * @throws taskTitleNotFoundException if the user leaves the title blank.
-     */
     private fun getTaskTitle(): String {
         val taskTitle = taskTitleInput.text.toString()
         if (taskTitle.isBlank()) {
@@ -341,10 +307,6 @@ class AddTask: AppCompatActivity() {
         return taskTitle
     }
 
-    /**
-     * @return the time of the task.
-     * @throws taskTimeNotFoundException if the user has not chosen a time for the task.
-     */
     private fun getTaskTime(): Times {
         val timeString = taskTimeInput.selectedItem.toString()
         var taskTime: Times? = null
@@ -368,10 +330,6 @@ class AddTask: AppCompatActivity() {
         return taskTime
     }
 
-    /**
-     * @return the weekly repeat of the task.
-     * @throws repeatDayNotFoundException if the user did not select any days to be repeated.
-     */
     private fun getRepeatDays(): HashMap<Weekdays, Boolean> {
         val repeatDays = HashMap<Weekdays, Boolean>()
         var noRepeats = true
@@ -412,10 +370,6 @@ class AddTask: AppCompatActivity() {
         return repeatDays
     }
 
-    /**
-     * @return the daily goal for a counter task.
-     * @throws counterGoalException the goal is not a positive integer.
-     */
     private fun getCounterGoal(): Int {
         try {
             val counterGoal = dailyGoalNumInput.text.toString().toInt()
@@ -428,10 +382,6 @@ class AddTask: AppCompatActivity() {
         }
     }
 
-    /**
-     * @return the duration goal for a Pomodoro timer or chronometer task.
-     * @throws timerGoalException if the duration is not between 0 minute and 23h59m.
-     */
     private fun getTimerGoal(): Long {
         try {
             val hour = dailyGoalHourInput.text.toString().toLong()
@@ -446,10 +396,6 @@ class AddTask: AppCompatActivity() {
         }
     }
 
-    /**
-     * @return the goal number of cycles for a Pomodoro task.
-     * @throws cycleGoalException if the goal is not a positive integer.
-     */
     private fun getCycleGoal(): Int {
         try {
             val cycles = dailyGoalCyclesInput.text.toString().toInt()

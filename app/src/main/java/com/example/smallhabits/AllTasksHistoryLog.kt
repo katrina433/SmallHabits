@@ -1,8 +1,5 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
-/**
- * Records the daily completion of all the tasks.
- */
 class AllTasksHistoryLog(
     var progressPercent: Int = 0,
     var progressString: String = "",

@@ -1,6 +1,4 @@
-package com.example.habitbuilder
-
-import android.net.Uri
+package com.example.smallhabits
 
 class TaskHistoryLog(
     var progressPercent: Int = 0,

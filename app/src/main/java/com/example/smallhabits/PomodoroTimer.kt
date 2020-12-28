@@ -1,13 +1,11 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.app.*
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.util.Log.d
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
@@ -72,7 +70,7 @@ class PomodoroTimer : AppCompatActivity() {
 
     override fun finish() {
         timer?.cancel()
-        val resultIntent = Intent("com.example.habitbuilder.POMODORO_TIMER")
+        val resultIntent = Intent("com.example.smallhabits.POMODORO_TIMER")
         resultIntent.putExtra(resources.getString(R.string.task_id), task.id)
         LocalBroadcastManager.getInstance(this).sendBroadcast(resultIntent)
         super.finish()

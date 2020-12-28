@@ -1,14 +1,9 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.graphics.drawable.Drawable
-import android.net.Uri
-import android.os.CountDownTimer
-import android.util.Log.d
 import android.widget.*
-import androidx.core.view.children
 import java.util.*
 import kotlin.collections.HashMap
-import kotlin.math.max
 import kotlin.math.min
 
 class TimerTask (

@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 enum class Weekdays (val string: String) {
     SUN("sun"),

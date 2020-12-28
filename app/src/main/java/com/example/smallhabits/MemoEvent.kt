@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.graphics.Color
 import com.github.sundeepk.compactcalendarview.domain.Event

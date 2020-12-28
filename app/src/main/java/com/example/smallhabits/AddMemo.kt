@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.Manifest
 import android.app.Activity
@@ -30,10 +30,6 @@ class AddMemo : AppCompatActivity() {
     private lateinit var photoPath: String
     private var imageUri: Uri? = null
 
-    /**
-     * Create the activity for adding/editing/deleting memo.
-     * Allows user to add image through camera, gallery.
-     */
     override fun onCreate(savedInstanceState: Bundle?) {
         val taskManagementDB = getSharedPreferences(
             resources.getString(R.string.task_management_database), Context.MODE_PRIVATE)
@@ -95,10 +91,6 @@ class AddMemo : AppCompatActivity() {
         }
     }
 
-    /**
-     * Getting the result for camera permission request.
-     * Open the camera if the permission is granted.
-     */
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -116,9 +108,6 @@ class AddMemo : AppCompatActivity() {
         }
     }
 
-    /**
-     * Getting the image URI from camera or gallery and display the picture.
-     */
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) {
@@ -144,10 +133,6 @@ class AddMemo : AppCompatActivity() {
         }
     }
 
-    /**
-     * If the user is editing an existing memo,
-     * display the image and/or text of the current memo.
-     */
     private fun displayCurrentMemo(memoString: String, memoImage: String) {
         if (memoString != resources.getString(R.string.empty_string)) {
             memoEditText.setText(memoString)
@@ -165,9 +150,6 @@ class AddMemo : AppCompatActivity() {
         }
     }
 
-    /**
-     * Ask for device camera permission.
-     */
     private fun getCameraPermission() {
         ActivityCompat.requestPermissions(
             this,
@@ -176,10 +158,7 @@ class AddMemo : AppCompatActivity() {
         )
     }
 
-    /**
-     * Open device document for choosing an image file.
-     */
-    private fun openGallery() {
+   private fun openGallery() {
         val galleryIntent = Intent(Intent.ACTION_OPEN_DOCUMENT,
             MediaStore.Images.Media.EXTERNAL_CONTENT_URI).also {
             it.type = "image/*"
@@ -189,9 +168,6 @@ class AddMemo : AppCompatActivity() {
         startActivityForResult(galleryIntent, resources.getInteger(R.integer.open_gallery_request_code))
     }
 
-    /**
-     * Open device camera for taking a picture.
-     */
     private fun takePicture() {
         val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE).also {
             it.addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)

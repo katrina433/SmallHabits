@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.content.Context
 import android.content.res.Resources
@@ -9,7 +9,6 @@ import androidx.annotation.StyleableRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.get
-import androidx.core.view.setPadding
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.*
 import com.github.mikephil.charting.components.Legend
@@ -28,9 +27,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
-/**
- * Display the charts for task completion history.
- */
 class Charts : AppCompatActivity() {
 
     private var colorPrimary = Color.DKGRAY
@@ -41,9 +37,6 @@ class Charts : AppCompatActivity() {
     private val taskNotFoundException =
         Resources.NotFoundException("failed to retrieve task")
 
-    /**
-     * Display charts for one or all tasks.
-     */
     override fun onCreate(savedInstanceState: Bundle?) {
         val taskManagementDB = getSharedPreferences(
             resources.getString(R.string.task_management_database), Context.MODE_PRIVATE)
@@ -86,9 +79,6 @@ class Charts : AppCompatActivity() {
         }
     }
 
-    /**
-     * Get the primary color, accent color, and text color of the current theme.
-     */
     private fun getThemeColors() {
         val array = intArrayOf(
             R.attr.colorPrimary,
@@ -103,9 +93,6 @@ class Charts : AppCompatActivity() {
         attr.recycle()
     }
 
-    /**
-     * @return the task to be displayed from shared preferences.
-     */
     private fun getTask(): Task {
         val taskDB = getSharedPreferences(resources.getString(R.string.task_database), Context.MODE_PRIVATE)
         val taskId = intent.getIntExtra(resources.getString(R.string.task_id), 0)
@@ -130,9 +117,6 @@ class Charts : AppCompatActivity() {
         }
     }
 
-    /**
-     * Display the completion history of an individual task as a pie chart and a radar chart.
-     */
     private fun displayIndividualTaskCharts(task: Task) {
         val progressList =
             task.history.map { Pair(it.first, it.second.progressPercent) }
@@ -142,9 +126,6 @@ class Charts : AppCompatActivity() {
         displayRadarChart(stats)
     }
 
-    /**
-     * Display the completion history of all tasks as a pie chart, radar chart, and bar chart.
-     */
     private fun displayAllTasksCharts() {
         val taskManagementDB = getSharedPreferences(
             resources.getString(R.string.task_management_database), Context.MODE_PRIVATE)
@@ -166,10 +147,6 @@ class Charts : AppCompatActivity() {
         displayBarChart(allTaskStats)
     }
 
-    /**
-     * Create a pie chart with three components: completed, started, and no progress.
-     * @param stats: contains the percent of days (value) of different completion states (key).
-     */
     private fun displayPieChart(stats: HashMap<String, Int>) {
         val pie = pieChart
         pie.description.isEnabled = false
@@ -235,10 +212,6 @@ class Charts : AppCompatActivity() {
         pie.animateXY(1400, 1400)
     }
 
-    /**
-     * Create a radar chart with completion history by weekday.
-     * @param stats: contains the percent of completion (value) of each weekday (key):
-     */
     private fun displayRadarChart(stats: HashMap<String, Int>) {
         val radar = radarChart
         radar.description.isEnabled = false
@@ -311,10 +284,6 @@ class Charts : AppCompatActivity() {
         radar.invalidate()
     }
 
-    /**
-     * Create a bar chart with the completion history of each task.
-     * @param stats: pairs of task title and completion percent.
-     */
     private fun displayBarChart(stats: List<Pair<String, Int>>) {
         val bar = HorizontalBarChart(this)
         bar.description.isEnabled = false
@@ -395,10 +364,6 @@ class Charts : AppCompatActivity() {
         chartFlipper.addView(bar)
     }
 
-    /**
-     * @return the stats for displaying pie and radar charts.
-     * @param progressList: pairs of dates and progress percent.
-     */
     private fun getStats(progressList: List<Pair<Long, Int>>): HashMap<String, Int> {
         val stats = HashMap<String, Int>()
         var noProgress = 0
@@ -450,9 +415,6 @@ class Charts : AppCompatActivity() {
         return stats
     }
 
-    /**
-     * @return the stats for displaying the bar chart. Pairs of task titles and progress percent.
-     */
     private fun getAllTaskStat(): List<Pair<String, Int>> {
 
         val taskStat = ArrayList<Pair<Task, Int>>()
@@ -494,9 +456,6 @@ class Charts : AppCompatActivity() {
         return taskStat.map { Pair(it.first.taskTitle, it.second) }
     }
 
-    /**
-     * Sort the task list according to the sort method set in the main activity.
-     */
     private fun sortTaskList(taskList: ArrayList<Pair<Task, Int>>) {
         if (sortMethod == resources.getString(R.string.sort_by_id)) {
             Collections.sort(taskList,
@@ -513,10 +472,6 @@ class Charts : AppCompatActivity() {
         }
     }
 
-    /**
-     * Animate the chart in the given view.
-     * @param view: the view containing the chart to be animated.
-     */
     private fun animate(view: View) {
         when (view) {
             is PieChart -> {

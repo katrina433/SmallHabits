@@ -1,4 +1,4 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.app.Activity
 import android.app.AlertDialog

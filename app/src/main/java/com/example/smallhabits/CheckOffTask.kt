@@ -1,12 +1,9 @@
-package com.example.habitbuilder
+package com.example.smallhabits
 
 import android.graphics.drawable.Drawable
-import android.net.Uri
-import android.util.Log.d
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.ProgressBar
-import android.widget.RelativeLayout
 import java.util.*
 import kotlin.collections.HashMap
 
