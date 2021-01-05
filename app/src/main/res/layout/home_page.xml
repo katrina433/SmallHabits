@@ -180,6 +180,18 @@
             </LinearLayout>
         </ScrollView>
 
+        <TextView
+            android:id="@+id/noTaskNote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16sp"
+            android:gravity="center"
+            android:text="@string/no_task_note"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="?android:attr/colorAccent"
+            android:textSize="36sp"
+            android:visibility="gone" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

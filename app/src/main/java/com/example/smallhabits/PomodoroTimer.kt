@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 import android.app.*
 import android.content.Context
@@ -70,7 +70,7 @@ class PomodoroTimer : AppCompatActivity() {
 
     override fun finish() {
         timer?.cancel()
-        val resultIntent = Intent("com.example.smallhabits.POMODORO_TIMER")
+        val resultIntent = Intent("com.keepsimple.smallhabits.POMODORO_TIMER")
         resultIntent.putExtra(resources.getString(R.string.task_id), task.id)
         LocalBroadcastManager.getInstance(this).sendBroadcast(resultIntent)
         super.finish()

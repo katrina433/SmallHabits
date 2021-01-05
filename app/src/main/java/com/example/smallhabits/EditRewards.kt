@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 import android.app.Activity
 import android.content.Context

@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 import android.graphics.drawable.Drawable
 import android.os.SystemClock
@@ -7,9 +7,9 @@ import android.widget.Chronometer
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import androidx.core.view.children
-import com.example.smallhabits.TimeUtil.oneHour
-import com.example.smallhabits.TimeUtil.oneMinute
-import com.example.smallhabits.TimeUtil.oneSecond
+import com.keepsimple.smallhabits.TimeUtil.oneHour
+import com.keepsimple.smallhabits.TimeUtil.oneMinute
+import com.keepsimple.smallhabits.TimeUtil.oneSecond
 import java.util.*
 import kotlin.collections.HashMap
 import kotlin.math.min

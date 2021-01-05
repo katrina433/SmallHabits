@@ -62,6 +62,7 @@
     <string name="reward_achieved_message_one">You reached</string>
     <string name="reward_achieved_message_two">credits! Enjoy your reward(s):</string>
     <string name="reward_achieved_message_button">Yay</string>
+    <string name="no_task_note">You don\'t have any tasks, create one now!</string>
 
     <string-array name="task_types">
         <item>@string/check_off</item>

@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 enum class Weekdays (val string: String) {
     SUN("sun"),

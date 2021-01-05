@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 import android.app.Activity
 import android.content.Context
@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.example.smallhabits.R.*
+import com.keepsimple.smallhabits.R.*
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.add_task.*
 import java.lang.Exception

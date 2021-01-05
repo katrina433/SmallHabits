@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.smallhabits">
+    package="com.keepsimple.smallhabits">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/BrownTheme">
         <activity
-            android:name="com.example.smallhabits.MainActivity"
+            android:name="com.keepsimple.smallhabits.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask">
             <intent-filter>
@@ -27,18 +27,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.smallhabits.PomodoroTimer"
+            android:name="com.keepsimple.smallhabits.PomodoroTimer"
             android:launchMode="singleInstance">
         </activity>
-        <activity android:name="com.example.smallhabits.AddTask" />
-        <activity android:name="com.example.smallhabits.TaskDetail" />
-        <activity android:name="com.example.smallhabits.AddMemo" />
-        <activity android:name="com.example.smallhabits.DisplayMemo" />
-        <activity android:name="com.example.smallhabits.Charts" />
-        <activity android:name="com.example.smallhabits.EditRewards" />
+        <activity android:name="com.keepsimple.smallhabits.AddTask" />
+        <activity android:name="com.keepsimple.smallhabits.TaskDetail" />
+        <activity android:name="com.keepsimple.smallhabits.AddMemo" />
+        <activity android:name="com.keepsimple.smallhabits.DisplayMemo" />
+        <activity android:name="com.keepsimple.smallhabits.Charts" />
+        <activity android:name="com.keepsimple.smallhabits.EditRewards" />
 
         <receiver
-            android:name="com.example.smallhabits.ReminderBroadcast"
+            android:name="com.keepsimple.smallhabits.ReminderBroadcast"
             android:enabled="true"
             android:exported="true"/>
     </application>

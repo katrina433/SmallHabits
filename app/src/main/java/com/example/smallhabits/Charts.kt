@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 import android.content.Context
 import android.content.res.Resources
@@ -361,6 +361,7 @@ class Charts : AppCompatActivity() {
         data.setValueTextSize(10f)
         data.barWidth = 0.9f
         bar.data = data
+        bar.setDrawValueAboveBar(true)
         chartFlipper.addView(bar)
     }
 

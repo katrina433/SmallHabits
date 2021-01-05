@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 import com.github.sundeepk.compactcalendarview.domain.Event
 

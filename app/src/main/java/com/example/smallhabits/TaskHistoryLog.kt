@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 class TaskHistoryLog(
     var progressPercent: Int = 0,

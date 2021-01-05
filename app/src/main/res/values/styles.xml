@@ -7,6 +7,7 @@
         <item name="colorSecondary">@color/button_color</item>
         <item name="colorSecondaryVariant">@color/button_stroke</item>
         <item name="android:windowBackground">@color/background</item>
+        <item name="android:popupBackground">@color/background</item>
         <item name="android:textColorPrimary">@color/text_color_primary</item>
         <item name="android:textColorSecondary">@color/text_color_secondary</item>
         <item name="android:windowDisablePreview">true</item>
@@ -19,6 +20,7 @@
         <item name="colorSecondary">@color/gray_5</item>
         <item name="colorSecondaryVariant">@color/gray_3</item>
         <item name="android:windowBackground">@color/gray_4</item>
+        <item name="android:popupBackground">@color/gray_4</item>
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorSecondary">@color/white_3</item>
     </style>

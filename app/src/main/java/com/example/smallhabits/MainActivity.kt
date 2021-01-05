@@ -1,4 +1,4 @@
-package com.example.smallhabits
+package com.keepsimple.smallhabits
 
 import android.app.*
 import android.content.*
@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         createNotificationChannel()
         LocalBroadcastManager.getInstance(this).registerReceiver(
-            timerIntentReceiver, IntentFilter("com.example.smallhabits.POMODORO_TIMER"))
+            timerIntentReceiver, IntentFilter("com.keepsimple.smallhabits.POMODORO_TIMER"))
 
         initVariables()
         setUpListeners()
@@ -301,6 +301,7 @@ class MainActivity : AppCompatActivity() {
         morningHeaderLayout.visibility = View.GONE
         afternoonHeaderLayout.visibility = View.GONE
         eveningHeaderLayout.visibility = View.GONE
+        noTaskNote.visibility = View.GONE
         allDayTaskLayout.removeAllViews()
         morningTaskLayout.removeAllViews()
         afternoonTaskLayout.removeAllViews()
@@ -313,9 +314,11 @@ class MainActivity : AppCompatActivity() {
         morningTaskLayout.columnCount = columns
         afternoonTaskLayout.columnCount = columns
         eveningTaskLayout.columnCount = columns
+        var noTasks = true
         for (entry in taskList) {
             val task = entry.first
             if (!task.archived && task.active) {
+                noTasks = false
                 val layout = entry.second.first
                 when (task.time) {
                     Times.ALL_DAY -> {
@@ -336,6 +339,9 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+        }
+        if (noTasks) {
+            noTaskNote.visibility = View.VISIBLE
         }
     }
 
