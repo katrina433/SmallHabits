@@ -20,7 +20,6 @@ import com.google.common.collect.HashBiMap
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_main.*
-
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.home_page.*
 import kotlinx.android.synthetic.main.progress_history_page.*

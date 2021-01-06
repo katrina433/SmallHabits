@@ -14,10 +14,6 @@ import kotlinx.android.synthetic.main.add_task.*
 import java.lang.Exception
 import kotlin.collections.HashMap
 
-/**
- * The activity to add/edit a task.
- * User inputs: title, time, weekly repeats, type, and daily goal for certain types.
- */
 class AddTask: AppCompatActivity() {
 
     private val resultIntent = Intent()

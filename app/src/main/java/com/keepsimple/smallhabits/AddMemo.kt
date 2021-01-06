@@ -18,11 +18,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.add_memo.*
 
-/**
- * The activity to add/edit/delete a memo.
- * A memo can be in the form of an image and/or text.
- * A user can add up to one memo for each task each day.
- */
 class AddMemo : AppCompatActivity() {
     private var resultCode = Activity.RESULT_CANCELED
     private var resultIntent = Intent()
