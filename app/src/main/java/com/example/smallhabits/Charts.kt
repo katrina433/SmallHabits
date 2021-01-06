@@ -359,6 +359,7 @@ class Charts : AppCompatActivity() {
         sets.add(dataSet)
         val data = BarData(sets)
         data.setValueTextSize(10f)
+        data.setValueTextColor(textColor)
         data.barWidth = 0.9f
         bar.data = data
         bar.setDrawValueAboveBar(true)
